@@ -60,4 +60,14 @@ public class Snake {
     public void bite() {
         System.out.println("Кусь");
     }
+
+    @Override
+    public String toString() {
+        return "Snake{" +
+                "color='" + color + '\'' +
+                ", length=" + length +
+                ", age=" + age +
+                ", isSleeping=" + isSleeping +
+                '}';
+    }
 }
