@@ -2,10 +2,13 @@ public class Snake {
     private String color;
     private double length;
     private double age;
+    private boolean isSleeping;
 
-    public Snake(String color, double length) {
+    public Snake(String color, double length, double age, boolean isSleeping) {
         this.color = color;
         this.length = length;
+        this.age = age;
+        this.isSleeping = isSleeping;
     }
 
     public String getColor() {
@@ -40,8 +43,18 @@ public class Snake {
         }
     }
 
-    public void sleep() {
+    public boolean isSleeping() {
+        return isSleeping;
+    }
+
+    public void setSleeping() {
         System.out.println("Змея спит");
+        isSleeping = true;
+    }
+
+    public void wakeUp() {
+        System.out.println("Змея проснулась");
+        isSleeping = false;
     }
 
     public void bite() {
