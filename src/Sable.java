@@ -4,12 +4,14 @@ public class Sable {
     private String name;
     private int weight;
     private int age;
+    private int ageSable;
 
     // Конструктор
     public Sable(String name, int weight, int age) {
         this.name = name;
         this.weight = weight;
         this.age = age;
+        this.ageSable = age * 7;
     }
 
     // Методы класса
@@ -18,7 +20,7 @@ public class Sable {
     }
 
     public void sayInfo() {
-        System.out.println("Имя: " + name + ", вес: " + weight + ", возраст: " + age);
+        System.out.println("Имя: " + name + ", вес: " + weight + ", возраст: " + age+ "человеческий» возраст:" + ageSable );
     }
 
     // Геттеры
@@ -34,20 +36,24 @@ public class Sable {
         return age;
     }
 
-    // Сеттеры с проверкой
-    public void setAge(int age) {
-        if (age >= 0) {
-            this.age = age;
-        } else {
-            System.out.println("Возраст должен быть положительным");
-        }
+    public int getAgeSable() {
+        return ageSable;
     }
-
-    public void setWeight(int weight) {
-        if (weight > 0) {
-            this.weight = weight;
-        } else {
-            System.out.println("Вес должен быть положительным");
+        // Сеттеры с проверкой
+    public void setAge ( int age){
+            if (age >= 0) {
+                this.age = age;
+            } else {
+                System.out.println("Возраст должен быть положительным");
+            }
         }
+
+    public void setWeight ( int weight){
+            if (weight > 0) {
+                this.weight = weight;
+            } else {
+                System.out.println("Вес должен быть положительным");
+            }
+
     }
 }
