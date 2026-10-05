@@ -1,6 +1,7 @@
 public class Snake {
     private String color;
     private double length;
+    private double age;
 
     public Snake(String color, double length) {
         this.color = color;
@@ -20,10 +21,22 @@ public class Snake {
     }
 
     public void setLength(double length) {
-        if (length < 0) {
+        if (length <= 0) {
             throw new IllegalArgumentException("Не может быть такой змеи!");
         } else {
             this.length = length;
+        }
+    }
+
+    public double getAge() {
+        return age;
+    }
+
+    public void setAge(double age) {
+        if (length <= 0) {
+            throw new IllegalArgumentException("Не может быть такой змеи!");
+        } else {
+            this.age = age;
         }
     }
 
