@@ -12,7 +12,7 @@ public class ZooM {
         cat.jump();
     }
     static void testFox(){
-        Fox f = new Fox("Домино", "черно-бурая", 5, "черный");
+        Fox f = new Fox("Домино", 1, 5, "черно-бурый");
         f.showInfo();
         f.makeSound();
     }

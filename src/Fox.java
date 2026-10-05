@@ -4,9 +4,11 @@ public class Fox {
     int age;
     String color;
 
-    public Fox(String name, String species, int age, String color) {
+    // alkaz07: Изменил сигнатуру конструктора, чтобы использовать внутри метод setter
+    public Fox(String name, int speciesNum, int age, String color) {
         this.name = name;
-        this.species = species;
+//        this.species = species;
+        this.setSpecies(speciesNum);
         this.age = age;
         this.color = color;
     }
