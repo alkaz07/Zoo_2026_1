@@ -1,4 +1,4 @@
-public class Pike () {
+public class Pike {
     String name;
     int weight;
     int length;
@@ -14,7 +14,7 @@ public class Pike () {
         return name;
     }
 
-    public String getWeight() {
+    public int getWeight() {
         return weight;
     }
 
@@ -22,7 +22,7 @@ public class Pike () {
         return age;
     }
 
-    public String getLenght() {
+    public int getLenght() {
         return length;
     }
 
@@ -61,4 +61,4 @@ public class Pike () {
     }
 
 }
-}
+
