@@ -1,0 +1,82 @@
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.println("Введите имя очковой змеи:");
+		String name = scanner.nextLine();
+
+		System.out.println("Введите цвет очковой змеи:");
+		String color = scanner.nextLine();
+
+		System.out.println("Введите длину очковой змеи (в метрах):");
+		double length = scanner.nextDouble();
+
+		System.out.println("Введите возраст очковой змеи (лет):");
+		double age = scanner.nextDouble();
+
+		System.out.println("Очковая змея голодна? (введите да или нет):");
+		String inputHunger = scanner.next();
+
+		boolean isHungry;
+		if (inputHunger.equals("да")) {
+			isHungry = true;
+		} else if (inputHunger.equals("нет")) {
+			isHungry = false;
+		} else {
+			System.out.println("Некорректные данные. По умолчанию змея голодна.");
+			isHungry = true;
+		}
+
+		PeacockSnake mySnake = new PeacockSnake(name, color, length, age, isHungry);
+
+		System.out.println("\n--- Что делает змея ---");
+		mySnake.hiss();
+		mySnake.bite();
+		mySnake.spitAcid();
+		mySnake.eat();
+	}
+}
+
+class PeacockSnake {
+	String name;
+	String color;
+	double length;
+	double age;
+	boolean isHungry;
+
+	public PeacockSnake(String name, String color, double length, double age, boolean isHungry) {
+		this.name = name;
+		this.color = color;
+		this.length = length;
+		this.age = age;
+		this.isHungry = isHungry;
+	}
+
+	public void hiss() {
+		System.out.println(this.name + " Громко шипит: 'Шшшш!'");
+	}
+
+	public void eat() {
+		System.out.println(this.name + " Съела жирную крысу.");
+		this.isHungry = false;
+	}
+
+	public void bite() {
+		if (this.isHungry) {
+			System.out.println(this.name + " Голодная, может укусить, если признает добычей!");
+		} else {
+			System.out.println(this.name + " Сытая, если не трогать, не укусит.");
+		}
+	}
+
+	public void spitAcid() {
+		if (this.isHungry) {
+			System.out.println(this.name + " Злая от голода, может плюнуть ядом!");
+		} else {
+			System.out.println(this.name + " Довольная спит, если не подходить близко, не плюнет");
+		}
+	}
+}
