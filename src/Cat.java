@@ -26,9 +26,13 @@ public class Cat {
         System.out.println("спит");
     }
 
+    public void showCat(){
+        System.out.println("Кот " + name + " возраст " + age + " вес " + weight);
+    }
+
+
     static void main() {
         Cat cat1 = new Cat("Шип", 15, 6);
-        System.out.println("Кот " + cat1.name + "возраст " + cat1.age + " вес " + cat1.weight);
-        cat1.run();
+        cat1.showCat();
     }
 }
