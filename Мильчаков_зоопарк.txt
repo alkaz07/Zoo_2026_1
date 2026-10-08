@@ -1,0 +1,32 @@
+public class ZooMain {
+    static class Crocodile {
+        public void snap() {
+            System.out.println("Крокодил клацает зубами");
+        }
+    }
+
+    static class Hog {
+        public void grunt() {
+            System.out.println("Кабан хрюкает");
+        }
+    }
+
+    static class Owl {
+        public void hoot() {
+            System.out.println("Сова ухает");
+        }
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Добро пожаловать в наш Зоопарк");
+
+        Crocodile crocodile = new Crocodile();
+        crocodile.snap();
+
+        Hog hog = new Hog();
+        hog.grunt();
+
+        Owl owl = new Owl();
+        owl.hoot();
+    }
+}
